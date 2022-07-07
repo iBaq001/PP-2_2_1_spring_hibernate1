@@ -1,8 +1,10 @@
 package hiber;
 
 import hiber.config.AppConfig;
+import hiber.dao.CarDaolmp;
 import hiber.model.Car;
 import hiber.model.User;
+import hiber.service.CarServicelmp;
 import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -16,10 +18,10 @@ public class MainApp {
 
       UserService userService = context.getBean(UserService.class);
 
-      userService.add(new User("User1", "Lastname1", "user1@mail.ru", new Car("Porsche", 911)));
-      userService.add(new User("User2", "Lastname2", "user2@mail.ru", new Car("AUDI", 100)));
-      userService.add(new User("User3", "Lastname3", "user3@mail.ru", new Car("VAZ", 2107)));
-      userService.add(new User("User4", "Lastname4", "user4@mail.ru", new Car("GAZ", 412)));
+      userService.addUser(new User("User1", "Lastname1", "user1@mail.ru", new Car("Porsche", 911)));
+      userService.addUser(new User("User2", "Lastname2", "user2@mail.ru", new Car("AUDI", 100)));
+      userService.addUser(new User("User3", "Lastname3", "user3@mail.ru", new Car("VAZ", 2107)));
+      userService.addUser(new User("User4", "Lastname4", "user4@mail.ru", new Car("GAZ", 412)));
 
 
 
